@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Noomen Belmechri | UI Component Assignment</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <header class="site-header">
+        <nav class="site-nav" aria-label="Primary">
+            <a class="site-logo" href="index.html">
+                <span class="site-logo-mark" aria-label="noomen dot dev">
+                    &lt;noomen&gt;&lt;dev&gt;<span class="site-logo-cursor" aria-hidden="true"></span>
+                </span>
+            </a>
+
+            <ul class="nav-list">
+                <li><a class="nav-link" href="index.html">Home</a></li>
+                <li><a class="nav-link" href="about.html">About</a></li>
+                <li><a class="nav-link" href="projects.html">Projects</a></li>
+                <li><a class="nav-link nav-link-current" href="contact.html" aria-current="page">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="page-content">
+        <section class="contact-section" aria-labelledby="contact-form-title">
+            <form class="contact-form" id="contact-form" novalidate>
+                <h2 id="contact-form-title">Drop me a message</h2>
+
+                <div class="form-field">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required />
+                </div>
+
+                <div class="form-field">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required />
+                </div>
+
+                <div class="form-field">
+                    <label for="subject">Subject</label>
+                    <select id="subject" name="subject" required>
+                        <option value="">Choose a subject</option>
+                        <option value="inquiry">Inquiry</option>
+                        <option value="feedback">Feedback</option>
+                        <option value="support">Support</option>
+                    </select>
+                </div>
+
+                <div class="form-field">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="6" required></textarea>
+                </div>
+                <p class="form-status" id="form-status" hidden aria-live="form-thank-you-message"></p>
+                <button class="form-button" type="submit">Send Message</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <p class="footer-copy">Noomen Belmechri Portfolio</p>
+            <a class="footer-link" href="https://www.linkedin.com/in/noomenbm/" aria-label="LinkedIn profile">
+                <span class="footer-icon footer-icon-linkedin-dark" aria-hidden="true">in</span>
+                <span>LinkedIn</span>
+            </a>
+        </div>
+    </footer>
+
+    <script src="./contact-form.js"></script>
+</body>
+</html>

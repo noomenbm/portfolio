@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Noomen Belmechri | UI Component Assignment</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <header class="site-header">
+        <nav class="site-nav" aria-label="Primary">
+            <a class="site-logo" href="index.html">
+                <span class="site-logo-mark" aria-label="noomen dot dev">
+                    &lt;noomen&gt;&lt;dev&gt;<span class="site-logo-cursor" aria-hidden="true"></span>
+                </span>
+            </a>
+
+            <ul class="nav-list">
+                <li><a class="nav-link nav-link-current" href="index.html" aria-current="page">Home</a></li>
+                <li><a class="nav-link" href="about.html">About</a></li>
+                <li><a class="nav-link" href="projects.html">Projects</a></li>
+                <li><a class="nav-link" href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="page-content">
+        <section class="hero-section home-hero" aria-labelledby="hero-title">
+            <div class="hero-layout">
+                <div class="hero-copy">
+                    <h1 id="hero-title">Noomen Belmechri</h1>
+                    <p class="hero-role">Physics Researcher and Front-End Developer</p>
+                    <p>
+                        I'm a physicist transitioning into front-end development, combining scientific thinking with creative design. I enjoy solving problems and building interfaces that are both functional and visually appealing. My experience in academia has shaped my attention to detail and structured approach. I'm excited to keep learning and creating on the web.
+                    </p>
+                </div>
+
+                <div class="hero-media">
+                    <img
+                        class="hero-image"
+                        src="./images/noomen-belmechri.jpg"
+                        alt="Noomen Belmechri personal logo"
+                    />
+                </div>
+            </div>
+        </section>
+
+        <section class="featured-projects" aria-labelledby="featured-projects-title">
+            <div class="section-heading">
+                <div>
+                    <h2 id="featured-projects-title">Featured Projects</h2>
+                </div>
+                <a class="section-link" href="projects.html">All Projects</a>
+            </div>
+
+            <form class="search-box" role="search">
+                <label class="search-label" for="project-search">Filter box for featured projects</label>
+                <div class="search-input-wrap">
+                    <span class="search-icon" aria-hidden="true">Filter</span>
+                    <input
+                        class="search-input"
+                        type="search"
+                        id="project-search"
+                        name="search-word"
+                        placeholder="featured projects by title, type, or keyword"
+                        autocomplete="off"
+                    />
+                </div>
+            </form>
+
+            <p class="no-results" hidden>No matching projects found</p>
+            <div class="project-grid">
+                <!-- Project cards will be dynamically added here -->
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <p class="footer-copy">Noomen Belmechri Portfolio</p>
+            <a class="footer-link" href="https://www.linkedin.com/in/noomenbm/" aria-label="LinkedIn profile">
+                <span class="footer-icon footer-icon-linkedin-dark" aria-hidden="true">in</span>
+                <span>LinkedIn</span>
+            </a>
+        </div>
+    </footer>
+
+    <script src="./script.js"></script>
+</body>
+</html>

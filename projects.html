@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Noomen Belmechri | UI Component Assignment</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <header class="site-header">
+        <nav class="site-nav" aria-label="Primary">
+            <a class="site-logo" href="index.html">
+                <span class="site-logo-mark" aria-label="noomen dot dev">
+                    &lt;noomen&gt;&lt;dev&gt;<span class="site-logo-cursor" aria-hidden="true"></span>
+                </span>
+            </a>
+
+            <ul class="nav-list">
+                <li><a class="nav-link" href="index.html">Home</a></li>
+                <li><a class="nav-link" href="about.html">About</a></li>
+                <li><a class="nav-link nav-link-current" href="projects.html" aria-current="page">Projects</a></li>
+                <li><a class="nav-link" href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="page-content">
+        <!-- <section class="hero-section" aria-labelledby="projects-title">
+            <h1 id="projects-title">Projects</h1>
+            <p>Here is a full list of selected web and design projects from my portfolio.</p>
+        </section> -->
+
+        <section class="all-projects" aria-labelledby="all-projects-title">
+            <div class="section-heading">
+                <div>
+                    <h2 id="all-projects-title">All Projects</h2>
+                </div>
+            </div>
+
+            <form class="search-box" role="search">
+                <label class="search-label" for="project-search">Filter box for all projects</label>
+                <div class="search-input-wrap">
+                    <span class="search-icon" aria-hidden="true">Filter</span>
+                    <input
+                        class="search-input"
+                        type="search"
+                        id="project-search"
+                        name="search-word"
+                        placeholder="all projects by title, type, or keyword"
+                        autocomplete="off"
+                    />
+                </div>
+            </form>
+
+            <p class="no-results" hidden>No matching projects found</p>
+            <div class="project-grid">
+                <!-- Project cards will bedynamically added here!! -->
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <p class="footer-copy">Noomen Belmechri Portfolio</p>
+            <a class="footer-link" href="https://www.linkedin.com/in/noomenbm/" aria-label="LinkedIn profile">
+                <span class="footer-icon footer-icon-linkedin-dark" aria-hidden="true">in</span>
+                <span>LinkedIn</span>
+            </a>
+        </div>
+    </footer>
+
+    <script src="./script.js"></script>
+
+</body>
+</html>
