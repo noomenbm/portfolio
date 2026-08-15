@@ -1,7 +1,7 @@
 const projectGrid = document.querySelector(".project-grid");
 const noResultsMessage = document.querySelector(".no-results");
 const searchInput = document.querySelector("#project-search");
-const projectsDataURL = "https://noomenbm.github.io/humber-SDBP038-project_1/data/projects.json";
+const projectsDataURL = "./data/projects.json";
 
 let projects = [];
 
@@ -60,6 +60,10 @@ function findProject(searchWord, projectList) {
 }
 
 async function loadProjects() {
+    if (!projectGrid || !noResultsMessage) {
+        return;
+    }
+
     try {
         const response = await fetch(projectsDataURL);
         if (!response.ok) {
@@ -75,11 +79,15 @@ async function loadProjects() {
     }
 }
 
-searchInput.addEventListener("input", (event) => {
-    const matches = findProject(event.target.value, projects);
-    renderProjectsForCurrentPage(matches);
-});
+if (searchInput) {
+    searchInput.addEventListener("input", (event) => {
+        const matches = findProject(event.target.value, projects);
+        renderProjectsForCurrentPage(matches);
+    });
+}
 
-projectGrid.innerHTML = "";
-noResultsMessage.hidden = true;
+if (projectGrid && noResultsMessage) {
+    projectGrid.innerHTML = "";
+    noResultsMessage.hidden = true;
+}
 loadProjects();
